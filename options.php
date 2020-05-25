@@ -50,23 +50,23 @@
 
 ?>
 <style>
-  .jackson-healthcare-map-admin .notice  {
+  .wp-usa-map-healthcare-map-admin .notice  {
     display: none;
 
   }
-  .jackson-healthcare-map-admin .info {
+  .wp-usa-map-healthcare-map-admin .info {
     margin: 20px 0;
   }
-  .jackson-healthcare-map-admin .info p {
+  .wp-usa-map-healthcare-map-admin .info p {
     margin: 0;
   }
-  .jackson-healthcare-map-admin .finish-message p.error {
+  .wp-usa-map-healthcare-map-admin .finish-message p.error {
     color: red;
   }
 </style>
 
-<div class="wrap jackson-healthcare-map-admin">
-  <h1>Jackson Healthcare COVID-19 Response Map</h1>
+<div class="wrap wp-usa-map-healthcare-map-admin">
+  <h1>USA Map</h1>
   <div class="info">
     <p>Save your .CSV file with <strong>Souce</strong>, <strong>Destination</strong>, and <strong>Percentage</strong> as the headers. </p>
     <em>(ie. Row 1, columns A, B, and C, respectively)</em>

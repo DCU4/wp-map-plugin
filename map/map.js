@@ -1,7 +1,7 @@
 (function ($) {
 
   // load state data from json
-  $.getJSON("/wp-content/plugins/jackson-healthcare-map/map/map.json", function (data) {
+  $.getJSON("/map/map.json", function (data) {
     $.each(data.states, function (i, state) {
       $("#" + state.id).click(function (e) {
         displayInfo(state);
@@ -154,7 +154,7 @@
     });
 
     // getting json data from the results.php page
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/results.php", function (data) {
+    $.getJSON("/results.php", function (data) {
       var max;
       
       // sort data
@@ -225,7 +225,7 @@
       );
 
     // getting json data from the results.php page
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/results.php", function (data) {
+    $.getJSON("/results.php", function (data) {
       // sort data
       data.sort(stateSort);
 
