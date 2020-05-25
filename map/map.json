@@ -1,0 +1,572 @@
+{
+  "states": [
+    {
+      "id": "GA",
+      "label": "Georgia",
+      "hover": "Click to view the COVID-19 healthcare professional placement movement for Georgia",
+      "description": [
+        "In Georgia, we saw a highly localized response with 72% of healthcare professionals who live in the state serving in other parts of the state or coming from a neighboring state.",
+        "As travel became more challenging, we also saw an increase in the number of healthcare professionals serving in more local and regional capacities, opting to drive, versus fly, to the healthcare facilities they were serving."
+      ],
+      "data": [
+        {
+          "id": "GA",
+          "percent": 27.6
+        },
+        {
+          "id": "FL",
+          "percent": 18.5
+        },
+        {
+          "id": "SC",
+          "percent": 3.8
+        },
+        {
+          "id": "NC",
+          "percent": 3.5
+        },
+        {
+          "id": "VA",
+          "percent": 1.2
+        },
+        {
+          "id": "WV",
+          "percent": 0.8
+        },
+        {
+          "id": "KY",
+          "percent": 1.1
+        },
+        {
+          "id": "TN",
+          "percent": 4.3
+        },
+        {
+          "id": "AL",
+          "percent": 14.6
+        },
+        {
+          "id": "OH",
+          "percent": 2.2
+        },
+        {
+          "id": "IN",
+          "percent": 0.6
+        },
+        {
+          "id": "IL",
+          "percent": 0.8
+        },
+        {
+          "id": "MI",
+          "percent": 1.2
+        },
+        {
+          "id": "WI",
+          "percent": 0.5
+        },
+        {
+          "id": "NY",
+          "percent": 1.5
+        },
+        {
+          "id": "AR",
+          "percent": 1.5
+        },
+        {
+          "id": "MS",
+          "percent": 2.5
+        },
+        {
+          "id": "LA",
+          "percent": 0.8
+        },
+        {
+          "id": "MO",
+          "percent": 0.8
+        },
+        {
+          "id": "OK",
+          "percent": 1.4
+        },
+        {
+          "id": "TX",
+          "percent": 4.3
+        },
+        {
+          "id": "AZ",
+          "percent": 0.5
+        },
+        {
+          "id": "CA",
+          "percent": 1.8
+        }
+      ]
+    },
+    {
+      "id": "MI",
+      "label": "Michigan",
+      "hover": "Click to view the COVID-19 healthcare professional placement movement for Michigan",
+      "description":[
+        "In Michigan, there was a transition to more of a regional response, with healthcare professionals originating and traveling increasingly from one half of the country.", 
+        "As travel became more challenging, we also saw an increase in the number of healthcare professionals serving in more local and regional capacities, opting to drive, versus fly, to the healthcare facilities they were serving."
+      ],
+      "data": [
+        {
+          "id": "MI",
+          "percent": 28.7
+        },
+        {
+          "id": "OH",
+          "percent": 6.5
+        },
+        {
+          "id": "IN",
+          "percent": 4.6
+        },
+        {
+          "id": "PA",
+          "percent": 2.8
+        },
+        {
+          "id": "NJ",
+          "percent": 1.9
+        },
+        {
+          "id": "MD",
+          "percent": 0.9
+        },
+        {
+          "id": "VA",
+          "percent": 2.8
+        },
+        {
+          "id": "NC",
+          "percent": 2.8
+        },
+        {
+          "id": "CO",
+          "percent": 1.9
+        },
+        {
+          "id": "MO",
+          "percent": 1.9
+        },
+        {
+          "id": "IL",
+          "percent": 4.6
+        },
+        {
+          "id": "MS",
+          "percent": 3.7
+        },
+        {
+          "id": "WI",
+          "percent": 0.9
+        },
+        {
+          "id": "IA",
+          "percent": 1.9
+        },
+        {
+          "id": "KY",
+          "percent": 0.9
+        },
+        {
+          "id": "TN",
+          "percent": 2.8
+        },
+        {
+          "id": "AR",
+          "percent": 0.9
+        },
+        {
+          "id": "AL",
+          "percent": 0.9
+        },
+        {
+          "id": "OK",
+          "percent": 0.9
+        },
+        {
+          "id": "FL",
+          "percent": 6.5
+        },
+        {
+          "id": "TX",
+          "percent": 6.5
+        },
+        {
+          "id": "LA",
+          "percent": 1.9
+        },
+        {
+          "id": "MA",
+          "percent": 0.9
+        },
+        {
+          "id": "ME",
+          "percent": 0.9
+        },
+        {
+          "id": "UT",
+          "percent": 0.9
+        },
+        {
+          "id": "AZ",
+          "percent": 0.9
+        },
+        {
+          "id": "ID",
+          "percent": 1.9
+        },
+        {
+          "id": "WA",
+          "percent": 2.8
+        },
+        {
+          "id": "OR",
+          "percent": 1.9
+        },
+        {
+          "id": "CA",
+          "percent": 1.9
+        }
+      ]
+    },
+    {
+      "id": "NY",
+      "label": "New York",
+      "hover": "Click to view the COVID-19 healthcare professional placement movement for New York",
+      "description": [
+        "In New York, there was a transition to more of a regional response, with healthcare professionals originating and traveling increasingly from one half of the country.", 
+        "As travel became more challenging, we also saw an increase in the number of healthcare professionals serving in more local and regional capacities, opting to drive, versus fly, to the healthcare facilities they were serving."
+      ],
+      "data": [
+        {
+          "id": "NY",
+          "percent": 29.2
+        },
+        {
+          "id": "PA",
+          "percent": 5.5
+        },
+        {
+          "id": "MA",
+          "percent": 1.6
+        },
+        {
+          "id": "CT",
+          "percent": 1.5
+        },
+        {
+          "id": "ME",
+          "percent": 0.7
+        },
+        {
+          "id": "NJ",
+          "percent": 6.3
+        },
+        {
+          "id": "OH",
+          "percent": 2.3
+        },
+        {
+          "id": "MD",
+          "percent": 1.5
+        },
+        {
+          "id": "MI",
+          "percent": 1.4
+        },
+        {
+          "id": "IN",
+          "percent": 0.7
+        },
+        {
+          "id": "VA",
+          "percent": 2.2
+        },
+        {
+          "id": "NC",
+          "percent": 1.6
+        },
+        {
+          "id": "TN",
+          "percent": 4.8
+        },
+        {
+          "id": "IL",
+          "percent": 2.1
+        },
+        {
+          "id": "MN",
+          "percent": 1.4
+        },
+        {
+          "id": "MO",
+          "percent": 0.6
+        },
+        {
+          "id": "SC",
+          "percent": 1.2
+        },
+        {
+          "id": "GA",
+          "percent": 2.8
+        },
+        {
+          "id": "AL",
+          "percent": 2.5
+        },
+        {
+          "id": "LA",
+          "percent": 0.9
+        },
+        {
+          "id": "AR",
+          "percent": 1.7
+        },
+        {
+          "id": "OK",
+          "percent": 1.6
+        },
+        {
+          "id": "CO",
+          "percent": 2.0
+        },
+        {
+          "id": "FL",
+          "percent": 7.4
+        },
+        {
+          "id": "TX",
+          "percent": 4.3
+        },
+        {
+          "id": "UT",
+          "percent": 0.7
+        },
+        {
+          "id": "AZ",
+          "percent": 1.8
+        },
+        {
+          "id": "WA",
+          "percent": 1.0
+        },
+        {
+          "id": "OR",
+          "percent": 0.7
+        },
+        {
+          "id": "CA",
+          "percent": 2.6
+        }
+      ]
+    },
+    {
+      "id": "WA",
+      "label": "Washington",
+      "hover": "Click to view the COVID-19 healthcare professional placement movement for Washington",
+      "description": ["In Washington, we saw a balanced national response, as providers from around the country stepped up to fight the first COVID-19 cases on our shores."],
+      "data": [
+        {
+          "id": "WA",
+          "percent": 34.2
+        },
+        {
+          "id": "OR",
+          "percent": 9.0
+        },
+        {
+          "id": "ID",
+          "percent": 4.5
+        },
+        {
+          "id": "CA",
+          "percent": 1.8
+        },
+        {
+          "id": "NV",
+          "percent": 6.3
+        },
+        {
+          "id": "AZ",
+          "percent": 7.2
+        },
+        {
+          "id": "CO",
+          "percent": 1.8
+        },
+        {
+          "id": "OK",
+          "percent": 2.7
+        },
+        {
+          "id": "TX",
+          "percent": 1.8
+        },
+        {
+          "id": "AR",
+          "percent": 1.8
+        },
+        {
+          "id": "IL",
+          "percent": 4.5
+        },
+        {
+          "id": "MN",
+          "percent": 0.9
+        },
+        {
+          "id": "MI",
+          "percent": 0.9
+        },
+        {
+          "id": "OH",
+          "percent": 0.9
+        },
+        {
+          "id": "TN",
+          "percent": 3.6
+        },
+        {
+          "id": "AL",
+          "percent": 4.5
+        },
+        {
+          "id": "FL",
+          "percent": 4.5
+        },
+        {
+          "id": "GA",
+          "percent": 3.6
+        },
+        {
+          "id": "SC",
+          "percent": 1.8
+        },
+        {
+          "id": "NC",
+          "percent": 0.9
+        },
+        {
+          "id": "PA",
+          "percent": 0.9
+        },
+        {
+          "id": "NY",
+          "percent": 1.8
+        }
+      ]
+    },
+    {
+      "id": "NJ",
+      "label": "New Jersey",
+      "hover": "Click to view the COVID-19 healthcare professional placement movement for New Jersey",
+      "description": [
+        "In New Jersey, there was a transition to more of a regional response, with healthcare professionals originating and traveling increasingly from one half of the country.", 
+        "As travel became more challenging, we also saw an increase in the number of healthcare professionals serving in more local and regional capacities, opting to drive, versus fly, to the healthcare facilities they were serving."
+      ],
+      "data": [
+        {
+          "id": "NJ",
+          "percent": 22.0
+        },
+        {
+          "id": "PA",
+          "percent": 10.1
+        },
+        {
+          "id": "NY",
+          "percent": 7.8
+        },
+        {
+          "id": "CT",
+          "percent": 1.4
+        },
+        {
+          "id": "ME",
+          "percent": 0.9
+        },
+        {
+          "id": "OH",
+          "percent": 3.2
+        },
+        {
+          "id": "MI",
+          "percent": 2.8
+        },
+        {
+          "id": "WI",
+          "percent": 0.9
+        },
+        {
+          "id": "IL",
+          "percent": 2.3
+        },
+        {
+          "id": "MD",
+          "percent": 2.8
+        },
+        {
+          "id": "VA",
+          "percent": 2.8
+        },
+        {
+          "id": "NC",
+          "percent": 2.3
+        },
+        {
+          "id": "SC",
+          "percent": 0.9
+        },
+        {
+          "id": "TN",
+          "percent": 3.2
+        },
+        {
+          "id": "GA",
+          "percent": 2.8
+        },
+        {
+          "id": "FL",
+          "percent": 8.3
+        },
+        {
+          "id": "AL",
+          "percent": 8.7
+        },
+        {
+          "id": "MS",
+          "percent": 0.9
+        },
+        {
+          "id": "TX",
+          "percent": 4.6
+        },
+        {
+          "id": "CO",
+          "percent": 1.4
+        },
+        {
+          "id": "UT",
+          "percent": 0.9
+        },
+        {
+          "id": "AZ",
+          "percent": 1.8
+        },
+        {
+          "id": "CA",
+          "percent": 0.9
+        },
+        {
+          "id": "OR",
+          "percent": 0.9
+        }
+      ]
+    }
+  ]
+}
