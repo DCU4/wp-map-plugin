@@ -1,7 +1,7 @@
 (function ($) {
 
   // load state data from json
-  $.getJSON("/wp-content/plugins/jackson-healthcare-map/map/map.json", function (data) {
+  $.getJSON("/wp-content/plugins/wp-map-plugin/map/map.json", function (data) {
     $.each(data.states, function (i, state) {
       $("#" + state.id).click(function (e) {
         displayInfo(state);
@@ -150,7 +150,7 @@
     $("#map-info h3").text(state.label);
 
     // get saved descriptions from copy.php
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/copy.php", function (data) {
+    $.getJSON("/wp-content/plugins/wp-map-plugin/copy.php", function (data) {
       $.each(data, function (d, description) {
         if (d == state.id){
           $("#map-info ul").append(description);
@@ -159,7 +159,7 @@
     });
 
     // getting json data from the results.php page
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/results.php", function (data) {
+    $.getJSON("/wp-content/plugins/wp-map-plugin/results.php", function (data) {
       var max;
       
       // sort data
@@ -230,7 +230,7 @@
       );
 
     // getting json data from the results.php page
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/results.php", function (data) {
+    $.getJSON("/wp-content/plugins/wp-map-plugin/results.php", function (data) {
       // sort data
       data.sort(stateSort);
 
@@ -248,7 +248,7 @@
     });
     
     // get saved descriptions from copy.php
-    $.getJSON("/wp-content/plugins/jackson-healthcare-map/copy.php", function (data) {
+    $.getJSON("/wp-content/plugins/wp-map-plugin/copy.php", function (data) {
       $.each(data, function (d, description) {
         if (d == state.id){
           $list.append(description);
