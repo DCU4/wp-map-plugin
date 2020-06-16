@@ -60,40 +60,40 @@
   
 ?>
 <style>
-  .jackson-healthcare-map-admin .notice  {
+  .wp-map-plugin-admin .notice  {
     display: none;
   }
   
-  .jackson-healthcare-map-admin .info {
+  .wp-map-plugin-admin .info {
     margin: 20px 0;
   }
 
-  .jackson-healthcare-map-admin .finish-message p.error {
+  .wp-map-plugin-admin .finish-message p.error {
     color: red;
   }
 
-  .jackson-healthcare-map-admin #stateCopy {
+  .wp-map-plugin-admin #stateCopy {
     display: flex;
     flex-direction: column;
     width: 60%;
   }
-  .jackson-healthcare-map-admin #stateCopy {
+  .wp-map-plugin-admin #stateCopy {
     margin-bottom: 20px;
   }
-  .jackson-healthcare-map-admin #stateCopy .state-copy-label{
+  .wp-map-plugin-admin #stateCopy .state-copy-label{
     margin: 20px 0 10px;
     color: #23282d;
     font-size: 1.3em;
   }
 </style>
 
-<div class="wrap jackson-healthcare-map-admin">
-  <h1>Jackson Healthcare COVID-19 Response Map</h1>
+<div class="wrap wp-map-plugin-admin">
+  <h1>USA Map</h1>
   <div class="info">
     <p>Save your .CSV file with <strong>Source</strong>, <strong>Destination</strong>, and <strong>Percentage</strong> as the headers. <em>(ie. Row 1, columns A, B, and C, respectively)</em> </p>
-    <p><strong>Source</strong>: States with movement in response  </p>
-    <p><strong>Destination</strong>: Home states of Jackson Healthcare </p>
-    <p><strong>Percentage</strong>: Response percentage </p>
+    <p><strong>Source</strong>: Source States  </p>
+    <p><strong>Destination</strong>: Destination states </p>
+    <p><strong>Percentage</strong>:  Percentage </p>
   </div>
   <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="file" id="file" accept=".csv">
@@ -126,8 +126,8 @@
   <p>The save button is at the bottom!</p>
   <form id="stateCopy" method="post" action="options.php">
     <?php 
-    settings_fields( 'jh_map_options_group' );
-    do_settings_sections( 'jh_map_options_group' );
+    settings_fields( 'wp_usa_map_options_group' );
+    do_settings_sections( 'wp_usa_map_options_group' );
     foreach($destination_states as $state) { ?>
       <label class="state-copy-label" for="<?php echo $state; ?>stateCopy"><?php echo $state; ?> Copy</label> 
       <?php 
