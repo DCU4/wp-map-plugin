@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: Jackson Healthcare COVID-19 Response Map
+Plugin Name: USA Map
 Description: Used to update and display the COVID-19 response map
 Author: Dylan Connor / REQ
 */
 
 include( plugin_dir_path( __FILE__ ) .'shortcode.php');
 
-function jh_map_register_settings() {
-	add_option( 'jh_map_option_name', 'This is my option value.' );
-  register_setting( 'jh_map_options_group', 'jh_map_option_name', 'jh_map_callback' );
+function wp_usa_map_register_settings() {
+	add_option( 'wp_usa_map_option_name', 'This is my option value.' );
+  register_setting( 'wp_usa_map_options_group', 'wp_usa_map_option_name', 'wp_usa_map_callback' );
   global $wpdb;
   $query_destination = "SELECT `map_destination` FROM `map_data`";
   $destination_states = [];
@@ -19,35 +19,35 @@ function jh_map_register_settings() {
   }
   $destination_states = array_unique($destination_states);
   foreach($destination_states as $state) { 
-    register_setting( 'jh_map_options_group', $state.'stateCopy' );
+    register_setting( 'wp_usa_map_options_group', $state.'stateCopy' );
   }
 }
-add_action( 'admin_init', 'jh_map_register_settings' );
+add_action( 'admin_init', 'wp_usa_map_register_settings' );
 
 
-function jh_map_register_options_page() {
-  add_options_page( 'Jackson Healthcare COVID-19 Response Map', 'Jackson Healthcare COVID-19 Response Map', 'manage_options', 'jh_map', 'jh_map_options_page' );
+function wp_usa_map_register_options_page() {
+  add_options_page( 'USA Map', 'USA Map', 'manage_options', 'wp_usa_map', 'wp_usa_map_options_page' );
 }
-add_action( 'admin_menu', 'jh_map_register_options_page' );
+add_action( 'admin_menu', 'wp_usa_map_register_options_page' );
 
 
-function jh_map_options_page() {
+function wp_usa_map_options_page() {
 	include dirname( __FILE__ ) . '/options.php';
 }
 
 
-function jh_map_enqueue() {
-  wp_register_script( 'jh-map-scripts', '/wp-content/plugins/jackson-healthcare-map/map/map.js', array('jquery'), date("H:i:s"), true );
+function wp_usa_map_enqueue() {
+  wp_register_script( 'wp-usa-map-scripts', '/wp-content/plugins/wp-map-plugin/map/map.js', array('jquery'), date("H:i:s"), true );
 
   if ( shortcode_exists( 'responsemap' ) ) {
-    wp_enqueue_style( 'jh-map-style', '/wp-content/plugins/jackson-healthcare-map/map/map.css', array(), date("H:i:s"));
-    wp_enqueue_script('jh-map-scripts');
+    wp_enqueue_style( 'wp-usa-map-style', '/wp-content/plugins/wp-map-plugin/map/map.css', array(), date("H:i:s"));
+    wp_enqueue_script('wp-usa-map-scripts');
   }
 }
-add_action( 'wp_enqueue_scripts', 'jh_map_enqueue' );
+add_action( 'wp_enqueue_scripts', 'wp_usa_map_enqueue' );
 
 
-function jh_map_create_db() {
+function wp_usa_map_create_db() {
   global $wpdb;
   $charset_collate = $wpdb->get_charset_collate();
   require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -64,4 +64,4 @@ function jh_map_create_db() {
   dbDelta( $sql );
   $wpdb->show_errors();
 }
-register_activation_hook( __FILE__, 'jh_map_create_db' );
+register_activation_hook( __FILE__, 'wp_usa_map_create_db' );
