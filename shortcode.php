@@ -1,6 +1,6 @@
 <?php 
 
-function jh_map () {
+function wp_usa_map () {
   return '<div id="display-map">
   <div id="map-labels"></div>
   <div id="main-state-labels"></div>
@@ -105,4 +105,4 @@ function jh_map () {
 
 }
 
-add_shortcode('responsemap', 'jh_map');
+add_shortcode('responsemap', 'wp_usa_map');
