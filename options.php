@@ -1,5 +1,5 @@
 <?php
-  
+  $update_num_message = '';
   global $wpdb;
   if (isset($_POST["import"])) {
     $csv = $_FILES["file"]["tmp_name"];
@@ -23,6 +23,7 @@
         $query = "SELECT `map_id` FROM `map_data`";
         $rows = $wpdb->get_results( $query );
         if (count($rows) < $n){
+          $update_num_message = $n . ' rows of map data have been inserted.';
           $wpdb->insert('map_data', 
           array(
             'map_id' => $n, 
@@ -32,6 +33,7 @@
             )
           );
         } else {
+          $update_num_message = $n . ' rows of map data have been updated.';
           $wpdb->update('map_data', 
             array(
               'map_source' => $complete['Source'],
@@ -48,29 +50,50 @@
     fclose($csv);
   }
 
+  $query_destination = "SELECT `map_destination` FROM `map_data`";
+  $destination_states = [];
+  $rows_destination = $wpdb->get_results( $query_destination );
+  foreach($rows_destination as $row) {
+    array_push($destination_states, $row->map_destination);
+  }
+  $destination_states = array_unique($destination_states);
+  
 ?>
 <style>
-  .wp-usa-map-healthcare-map-admin .notice  {
+  .jackson-healthcare-map-admin .notice  {
     display: none;
-
   }
-  .wp-usa-map-healthcare-map-admin .info {
+  
+  .jackson-healthcare-map-admin .info {
     margin: 20px 0;
   }
-  .wp-usa-map-healthcare-map-admin .info p {
-    margin: 0;
-  }
-  .wp-usa-map-healthcare-map-admin .finish-message p.error {
+
+  .jackson-healthcare-map-admin .finish-message p.error {
     color: red;
+  }
+
+  .jackson-healthcare-map-admin #stateCopy {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  .jackson-healthcare-map-admin #stateCopy {
+    margin-bottom: 20px;
+  }
+  .jackson-healthcare-map-admin #stateCopy .state-copy-label{
+    margin: 20px 0 10px;
+    color: #23282d;
+    font-size: 1.3em;
   }
 </style>
 
-<div class="wrap wp-usa-map-healthcare-map-admin">
-  <h1>USA Map</h1>
+<div class="wrap jackson-healthcare-map-admin">
+  <h1>Jackson Healthcare COVID-19 Response Map</h1>
   <div class="info">
-    <p>Save your .CSV file with <strong>Souce</strong>, <strong>Destination</strong>, and <strong>Percentage</strong> as the headers. </p>
-    <em>(ie. Row 1, columns A, B, and C, respectively)</em>
-
+    <p>Save your .CSV file with <strong>Source</strong>, <strong>Destination</strong>, and <strong>Percentage</strong> as the headers. <em>(ie. Row 1, columns A, B, and C, respectively)</em> </p>
+    <p><strong>Source</strong>: States with movement in response  </p>
+    <p><strong>Destination</strong>: Home states of Jackson Healthcare </p>
+    <p><strong>Percentage</strong>: Response percentage </p>
   </div>
   <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="file" id="file" accept=".csv">
@@ -81,7 +104,7 @@
     <?php 
     if(isset($_POST["import"])) {
       if($_FILES["file"]['error'] == 0){ ?>
-        <p>Success!</p>
+        <p>Success! <?php echo $update_num_message; ?></p>
       <?php } else if ($_FILES["file"]['error'] == 1) { ?>
         <p class="error">Error: The uploaded file exceeds the upload_max_filesize directive in php.ini</p>
       <?php } else if ($_FILES["file"]['error'] == 2) { ?>
@@ -98,5 +121,18 @@
         <p class="error">Error: A PHP extension stopped the file upload.</p>
     <?php } } ?>
   </div>
-  
+  <hr>
+  <h3>Add copy for each state below</h3>
+  <p>The save button is at the bottom!</p>
+  <form id="stateCopy" method="post" action="options.php">
+    <?php 
+    settings_fields( 'jh_map_options_group' );
+    do_settings_sections( 'jh_map_options_group' );
+    foreach($destination_states as $state) { ?>
+      <label class="state-copy-label" for="<?php echo $state; ?>stateCopy"><?php echo $state; ?> Copy</label> 
+      <?php 
+      wp_editor(get_option($state.'stateCopy'), $state.'stateCopy');
+    }
+    submit_button(); ?> 
+  </form>
 </div>
