@@ -4,7 +4,6 @@
   // pull description out as json
   global $wpdb;
   $state_copy = [];
-  $copy = '';
   $query_destination = "SELECT `map_destination` FROM `map_data`";
   $destination_states = [];
   $rows_destination = $wpdb->get_results( $query_destination );
