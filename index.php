@@ -20,6 +20,7 @@ function wp_usa_map_register_settings() {
   $destination_states = array_unique($destination_states);
   foreach($destination_states as $state) { 
     register_setting( 'wp_usa_map_options_group', $state.'stateCopy' );
+    register_setting( 'wp_usa_map_options_group', $state.'stateHover' );
   }
 }
 add_action( 'admin_init', 'wp_usa_map_register_settings' );
