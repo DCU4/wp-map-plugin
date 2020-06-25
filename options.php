@@ -131,8 +131,13 @@
     foreach($destination_states as $state) { ?>
       <label class="state-copy-label" for="<?php echo $state; ?>stateCopy"><?php echo $state; ?> Copy</label> 
       <?php 
-      wp_editor(get_option($state.'stateCopy'), $state.'stateCopy');
+      wp_editor(get_option($state.'stateCopy'), $state.'stateCopy');?>
+      
+      <label class="state-hover-label" for="<?php echo $state; ?>stateHover"><?php echo $state; ?> Hover</label> 
+      <input value="<?php echo get_option($state.'stateHover'); ?>" type="text" name="<?php echo $state; ?>stateHover" id="<?php echo $state; ?>stateHover" placeholder="Hover text">
+    <?php
     }
-    submit_button(); ?> 
+    ?>
+    <?php submit_button(); ?> 
   </form>
 </div>
