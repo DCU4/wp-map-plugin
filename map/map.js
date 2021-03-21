@@ -1,5 +1,7 @@
 (function ($) {
 
+  // to do - make it dynamic
+  console.log('map js');
   // load state data from json
   $.getJSON("/wp-content/plugins/wp-map-plugin/map/map.json", function (data) {
     $.each(data.states, function (i, state) {
@@ -135,7 +137,15 @@
       .append("<span class='main-state-label'>" + state.label + "</span>")
     );
 
-    $("#" + state.id).attr("data-state-info", state.hover);
+     // set up hover 
+     $.getJSON("/wp-content/plugins/wp-map-plugin/hover.php", function (data) {
+      console.log(data);
+      $.each(data, function (h, hover) {
+        if (h == state.id){
+          $("#" + state.id).attr("data-state-info", hover);
+        }
+      });
+    });
 
     positionMainStateLabels();
 
@@ -229,6 +239,8 @@
         )
       );
 
+     
+
     // getting json data from the results.php page
     $.getJSON("/wp-content/plugins/wp-map-plugin/results.php", function (data) {
       // sort data
@@ -255,7 +267,6 @@
         }
       });
     });
-
 
 
     var $header = $("<h3>")

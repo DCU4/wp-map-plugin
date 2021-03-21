@@ -20,6 +20,7 @@ function wp_usa_map_register_settings() {
   $destination_states = array_unique($destination_states);
   foreach($destination_states as $state) { 
     register_setting( 'wp_usa_map_options_group', $state.'stateCopy' );
+    register_setting( 'wp_usa_map_options_group', $state.'stateHover' );
   }
 }
 add_action( 'admin_init', 'wp_usa_map_register_settings' );
@@ -37,11 +38,12 @@ function wp_usa_map_options_page() {
 
 
 function wp_usa_map_enqueue() {
+  // wp_register_script
   wp_register_script( 'wp-usa-map-scripts', '/wp-content/plugins/wp-map-plugin/map/map.js', array('jquery'), date("H:i:s"), true );
 
   if ( shortcode_exists( 'responsemap' ) ) {
     wp_enqueue_style( 'wp-usa-map-style', '/wp-content/plugins/wp-map-plugin/map/map.css', array(), date("H:i:s"));
-    wp_enqueue_script('wp-usa-map-scripts');
+    // wp_enqueue_script('wp-usa-map-scripts');
   }
 }
 add_action( 'wp_enqueue_scripts', 'wp_usa_map_enqueue' );

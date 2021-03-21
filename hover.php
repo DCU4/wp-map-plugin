@@ -3,7 +3,7 @@
   
   // pull description out as json
   global $wpdb;
-  $state_copy = [];
+  $state_hover = [];
   $query_destination = "SELECT `map_destination` FROM `map_data`";
   $destination_states = [];
   $rows_destination = $wpdb->get_results( $query_destination );
@@ -12,14 +12,14 @@
   }
   $destination_states = array_unique($destination_states);
   foreach($destination_states as $state) { 
-    array_push($state_copy, get_option($state.'stateCopy'));
+    array_push($state_hover, get_option($state.'stateHover'));
   }
 
-  $complete_copy = array_combine($destination_states, $state_copy);
+  $complete_hover = array_combine($destination_states, $state_hover);
   
   header("Content-type: application/json; charset=utf-8");
   
-  $json = json_encode($complete_copy);
+  $json = json_encode($complete_hover);
 
   if ($json === false) {
     // Avoid echo of empty string (which is invalid JSON), and
